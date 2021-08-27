@@ -1,6 +1,15 @@
 import java.util.Scanner;
 
 public class App {
+
+    private int appTest;
+    private double AppPrice;
+
+    public App(int appTest, double appPrice) {
+        this.appTest = appTest;
+        AppPrice = appPrice;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -14,20 +23,20 @@ public class App {
 
         System.out.print("TO: ");
         String to = sc.nextLine();
-        
+
         if (isShippingTypeAir) {
             double rate = checkRate(from, to, isShippingTypeAir);
             System.out.print("Please enter the weight: ");
             double weight = sc.nextDouble();
             System.out.println("Price: $" + rate * weight);
         }
-        
+
         sc.close();
     }
 
     public static double checkRate(String from, String to, boolean isShippingTypeAir) {
         if (isShippingTypeAir) {
-            if(from.equals("AP") && to.equals("EU")) {
+            if (from.equals("AP") && to.equals("EU")) {
                 return 8084.00;
             } else {
                 return 1000.00;
