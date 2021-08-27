@@ -30,6 +30,14 @@ public class App {
             } else {
                 return 1000.00;
             }
+        } else {
+            if(from.equals("CNSHA") && to.equals("DEHAM")) {
+                return 920.00;
+            } else if(from.equals("SGSIN") && to.equals("USLAX")){
+                return 1093.00;
+            }else {
+                return 1000.00;
+            }
         }
         if (from.equalsIgnoreCase("CNSHA") && to.equalsIgnoreCase("DEHAM")) {
             return 920.00;
