@@ -15,23 +15,28 @@ public class App {
         System.out.print("TO: ");
         String to = sc.nextLine();
         
-        if (isShippingTypeAir) {
-            double rate = checkRate(from, to);
-            System.out.print("Please enter the weight: ");
-            double weight = sc.nextDouble();
-            System.out.println("Price: $" + rate * weight);
-        }
+        double rate = checkRate(from, to, isShippingTypeAir);
+        System.out.print("Please enter the weight: ");
+        double weight = sc.nextDouble();
+        System.out.println("Price: $" + rate * weight);
         
         sc.close();
     }
 
     public static double checkRate(String from, String to, boolean isShippingTypeAir) {
         if (isShippingTypeAir) {
-            if(from.equals("AP") && to.equals("EU")) {
+            if (from.equalsIgnoreCase("AP") && to.equalsIgnoreCase("EU")) {
                 return 8084.00;
             } else {
                 return 1000.00;
             }
+        }
+        if (from.equalsIgnoreCase("CNSHA") && to.equalsIgnoreCase("DEHAM")) {
+            return 920.00;
+        } else if (from.equalsIgnoreCase("SGSIN") && to.equalsIgnoreCase("USLAX")) {
+            return 1093.00;
+        } else {
+            return 1000.00;
         }
     }
 }
