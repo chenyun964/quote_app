@@ -16,7 +16,7 @@ public class App {
         String to = sc.nextLine();
         
         if (isShippingTypeAir) {
-            double rate = checkRate(from, to);
+            double rate = checkRate(from, to, isShippingTypeAir);
             System.out.print("Please enter the weight: ");
             double weight = sc.nextDouble();
             System.out.println("Price: $" + rate * weight);
