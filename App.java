@@ -1,5 +1,9 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args){
-        System.out.println("test");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Eneter your region:");
+        String str = sc.nextLine();
     }
 }
