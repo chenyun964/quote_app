@@ -5,7 +5,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("SELECT SHIPPING TYPE:");
-        System.out.println("(1. Air   2. Ocean");
+        System.out.println("1. Air   2. Ocean");
         String typeInput = sc.nextLine();
         boolean isShippingTypeAir = (typeInput.equals("1") || typeInput.equalsIgnoreCase("air"));
 
@@ -30,6 +30,7 @@ public class App {
             } else {
                 return 1000.00;
             }
+        }
         
         if (from.equalsIgnoreCase("CNSHA") && to.equalsIgnoreCase("DEHAM")) {
             return 920.00;
