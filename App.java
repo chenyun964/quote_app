@@ -24,6 +24,5 @@ public class App {
         } else{
             return 1000.00;
         }
-        
     }
 }
