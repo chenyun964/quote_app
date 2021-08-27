@@ -7,7 +7,7 @@ public class App {
         System.out.println("SELECT SHIPPING TYPE:");
         System.out.print("(1. Air   2. Ocean");
         String typeInput = sc.nextLine();
-        boolean isShippingTypeAir = (typeInput.equals("1") || typeInput.toLowerCase().equals("air"));
+        boolean isShippingTypeAir = (typeInput.equals("1") || typeInput.equalsIgnoreCase("air"));
 
         System.out.print("FROM: ");
         String from = sc.nextLine();
