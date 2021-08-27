@@ -32,6 +32,12 @@ public class App {
             } else {
                 return 1000.00;
             }
+        } else {
+            if(from.equals("CNSHA") && to.equals("DEHAM")) {
+                return 920.00;
+            } else {
+                return 1000.00;
+            }
         }
     }
 }
