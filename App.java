@@ -21,7 +21,8 @@ public class App {
             double weight = sc.nextDouble();
             System.out.println("Price: $" + rate * weight);
         }
-
+        
+        sc.close();
     }
 
     public static double checkRate(String from, String to, boolean isShippingTypeAir) {
