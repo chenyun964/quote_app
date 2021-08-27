@@ -24,11 +24,13 @@ public class App {
 
     }
 
-    public static double checkRate(String from, String to) {
-        if(from.equals("AP")  && to.equals("EU")) {
-            return 8084.00;
-        } else {
-            return 1000.00;
+    public static double checkRate(String from, String to, boolean isShippingTypeAir) {
+        if (isShippingTypeAir) {
+            if(from.equals("AP") && to.equals("EU")) {
+                return 8084.00;
+            } else {
+                return 1000.00;
+            }
         }
     }
 }
