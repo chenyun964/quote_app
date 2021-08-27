@@ -5,7 +5,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("SELECT SHIPPING TYPE:");
-        System.out.print("(1. Air   2. Ocean");
+        System.out.println("(1. Air   2. Ocean");
         String typeInput = sc.nextLine();
         boolean isShippingTypeAir = (typeInput.equals("1") || typeInput.equalsIgnoreCase("air"));
 
